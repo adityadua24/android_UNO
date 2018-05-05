@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/cardsRemainingComputer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="20dp"
+        android:text="@string/header"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"/>
+
+    <ImageView
+        android:id="@+id/deck_image"
+        android:layout_width="148dp"
+        android:layout_height="197dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:onClick="onClick"
+        app:srcCompat="@drawable/uno" />
+
+    <TextView
+        android:id="@+id/cardsRemainingDeck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardsDeckHeader"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@id/cardsDeckHeader"
+        android:text="@string/remaining"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/cardsDeckHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deck_image"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:text="@string/deck_status"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/playerHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_above="@id/card11"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:text="@string/player_header"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pileTopHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/playerHeader"
+        android:text="@string/pileTopHeader"
+        android:layout_marginStart="10dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/pileTopCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/pileTopHeader"
+        android:layout_alignBottom="@id/pileTopHeader"
+        android:layout_centerInParent="true"
+        android:text="@string/numPileTop"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/card0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/numCard1"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="true"
+        android:onClick="onClick" />
+
+    <TextView
+        android:id="@+id/card1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/card0"
+        android:text="@string/numCard2"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="true"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/card2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/numCard3"
+        android:layout_toEndOf="@id/card1"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="true"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/card3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/card2"
+        android:text="@string/numCard4"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="true"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/card4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/card3"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="@string/numCard5"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="true"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/card5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:layout_toEndOf="@id/card4"
+        android:text="@string/numCard6"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="true"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/card6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:layout_toEndOf="@id/card5"
+        android:text="@string/numCard7"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="true"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/card7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card0"
+        android:text=""
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="false"
+        android:visibility="invisible"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/card8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card1"
+        android:layout_toEndOf="@id/card0"
+        android:text=""
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="false"
+        android:visibility="invisible"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/card9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card2"
+        android:layout_toEndOf="@id/card1"
+        android:text=""
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="false"
+        android:visibility="invisible"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/card10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card3"
+        android:layout_toEndOf="@id/card2"
+        android:text=""
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="false"
+        android:visibility="invisible"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/card11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card7"
+        android:layout_alignLeft="@id/card7"
+        android:text=""
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="false"
+        android:visibility="invisible"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/card12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card8"
+        android:layout_alignLeft="@id/card8"
+        android:layout_toEndOf="@id/card11"
+        android:text=""
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="false"
+        android:visibility="invisible"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/card13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card9"
+        android:layout_alignLeft="@id/card9"
+        android:layout_toEndOf="@id/card12"
+        android:text=""
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="false"
+        android:visibility="invisible"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/card14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card10"
+        android:layout_alignLeft="@id/card10"
+        android:layout_toEndOf="@id/card13"
+        android:text=""
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:clickable="false"
+        android:visibility="invisible"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/winner"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardsRemainingComputer"
+        android:layout_alignEnd="@id/cardsRemainingComputer"
+        android:layout_alignStart="@id/cardsRemainingComputer"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:visibility="invisible" />
+
+</android.widget.RelativeLayout>

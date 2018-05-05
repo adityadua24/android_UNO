@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">UNO</string>
+    <string name="hello_world">Hello World</string>
+    <string name="header">Your opponent (the computer) has 4 cards remaining</string>
+    <string name="deck_status">Cards remaining:-</string>
+    <string name="player_header">Your hand:\nSelect card to play</string>
+    <string name="numCard1">1</string>
+    <string name="numCard2">2</string>
+    <string name="numCard3">3</string>
+    <string name="numCard4">4</string>
+    <string name="numCard5">5</string>
+    <string name="numCard6">6</string>
+    <string name="numCard7">7</string>
+    <string name="numPileTop">X</string>
+    <string name="remaining">65</string>
+    <string name="pileTopHeader">Top of pile:</string>
+</resources>
