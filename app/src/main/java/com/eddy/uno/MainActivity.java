@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private HashMap<String, Integer> colorHashMap = new HashMap<String, Integer>();
     private TextView cardTextView0, cardTextView1, cardTextView2, cardTextView3,
             cardTextView4, cardTextView5, cardTextView6, cardTextView7, cardTextView8, cardTextView9,
-            cardTextView10, cardTextView11, cardTextView12, cardTextView13, cardTextView14,
+            cardTextView10, cardTextView11, cardTextView12, cardTextView13,
             pileTopCardTextView, cardsRemainingDeckTextView, winnerTextView,
             cardsRemainingComputerTextView;
     private ImageView deckImageView;
@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cardTextView11 = findViewById(R.id.card11);
         cardTextView12 = findViewById(R.id.card12);
         cardTextView13 = findViewById(R.id.card13);
-        cardTextView14 = findViewById(R.id.card14);
         deckImageView = findViewById(R.id.deck_image);
         pileTopCardTextView = findViewById(R.id.pileTopCard);
         cardsRemainingDeckTextView = findViewById(R.id.cardsRemainingDeck);
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setColorHashMap();
         
         // Set OnClick listener for all text views.
-        for(int i=0; i <=14; i++){
+        for(int i=0; i <=13; i++){
             textViewsHashMap.get("cardTextView".concat(Integer.toString(i))).setOnClickListener(this);
         }
 
@@ -98,7 +97,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textViewsHashMap.put("cardTextView11", cardTextView11);
         textViewsHashMap.put("cardTextView12", cardTextView12);
         textViewsHashMap.put("cardTextView13", cardTextView13);
-        textViewsHashMap.put("cardTextView14", cardTextView14);
         textViewsHashMap.put("pileTopCardTextView", pileTopCardTextView);
         textViewsHashMap.put("cardsRemainingDeckTextView", cardsRemainingDeckTextView);
         textViewsHashMap.put("cardsRemainingComputerTextView", cardsRemainingComputerTextView);
@@ -191,10 +189,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.card13:
                 playerCardClicked(user.getCard(13), 13);
                 break;
-            case R.id.card14:
-                playerCardClicked(user.getCard(14), 14);
-                break;
             case R.id.deck_image:
+                // User cant pick more than 14 cards
+                if(user.getNumCards() >= 14){
+                    return;
+                }
                 pickCardFromDeck();
                 computersTurn();
                 break;
@@ -238,7 +237,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             updateRemainingCardsDeckTextView();
         }
         else {
-
             // Put new card from deck into one of free cardTextView(from 1 to 7)
             int index = user.freeIndices.remove();
             user.cards.set(index, deck.pickCard());
@@ -277,7 +275,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void winnerCheck(){
         if ((user.getNumCards() == 0) || (computer.getNumCards() == 0)){
-            for(int i=0; i <=14; i++) {
+            for(int i=0; i <=13; i++) {
                 textViewsHashMap.get("cardTextView".concat(Integer.toString(i))).setVisibility(TextView.INVISIBLE);
             }
             String winnerString;

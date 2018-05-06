@@ -18,7 +18,7 @@ public class User extends Players {
         this.freeIndices = new LinkedList<>();
         this.freeIndicesReserve = new LinkedList<>();
 
-        for(int i=7; i <=14; i++){
+        for(int i=7; i <=13; i++){
             this.freeIndicesReserve.add(i);
         }
     }
