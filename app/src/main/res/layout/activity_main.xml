@@ -109,7 +109,7 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="true"
         android:onClick="onClick" />
 
@@ -124,7 +124,7 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="true"
         android:onClick="onClick"/>
 
@@ -139,7 +139,7 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="true"
         android:onClick="onClick"/>
 
@@ -154,7 +154,7 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="true"
         android:onClick="onClick"/>
 
@@ -169,7 +169,7 @@
         android:text="@string/numCard5"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="true"
         android:onClick="onClick"/>
 
@@ -184,7 +184,7 @@
         android:text="@string/numCard6"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="true"
         android:onClick="onClick"/>
 
@@ -199,7 +199,7 @@
         android:text="@string/numCard7"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="true"
         android:onClick="onClick"/>
 
@@ -213,7 +213,7 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="false"
         android:visibility="invisible"
         android:onClick="onClick"/>
@@ -229,7 +229,7 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="false"
         android:visibility="invisible"
         android:onClick="onClick"/>
@@ -245,7 +245,7 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="false"
         android:visibility="invisible"
         android:onClick="onClick"/>
@@ -261,7 +261,7 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="false"
         android:visibility="invisible"
         android:onClick="onClick"/>
@@ -276,7 +276,7 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="false"
         android:visibility="invisible"
         android:onClick="onClick"/>
@@ -292,7 +292,7 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="false"
         android:visibility="invisible"
         android:onClick="onClick"/>
@@ -308,7 +308,7 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="false"
         android:visibility="invisible"
         android:onClick="onClick"/>
@@ -324,7 +324,7 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:clickable="false"
         android:visibility="invisible"
         android:onClick="onClick"/>
@@ -339,7 +339,7 @@
         android:layout_alignEnd="@id/cardsRemainingComputer"
         android:layout_alignStart="@id/cardsRemainingComputer"
         android:textColor="@android:color/black"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:visibility="invisible" />
 
 </android.widget.RelativeLayout>

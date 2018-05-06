@@ -16,12 +16,16 @@ public class Card {
         this.color = color;
         this.nullCard = false;
     }
+
+    // Null card constructor
     public Card(String letter, String color){
         this.letter = letter;
         this.color = color;
         this.nullCard = true;
     }
 
+
+    // Returns true if either color or number matches
     public boolean matches(Card other) {
         return (other.number == this.number) || (other.color.compareTo(this.color) == 0);
     }
@@ -33,9 +37,13 @@ public class Card {
     public String getColor(){
         return this.color;
     }
+
+    // Only used for to get letter from null card
     public String getLetter(){
-        return this.letter;
+        if (nullCard) return this.letter;
+        else return null;
     }
+
     public boolean isNull(){
         return this.nullCard;
     }

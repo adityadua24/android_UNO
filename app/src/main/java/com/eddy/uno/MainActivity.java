@@ -118,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         pileCards.add(deck.pickCard());
     }
 
+    // Updates Text views for start of game
     private void setCardTextViewsForNewGame(){
 
         String indexTextViews = "cardTextView";
@@ -218,10 +219,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             computersTurn();
         }
     }
+
     private void updatePileTop(Card updateCard){
         pileCards.add(updateCard);
         updateTextView("pileTopCardTextView", updateCard);
     }
+
     private void pickCardFromDeck(){
         if (user.freeIndices.isEmpty()) {
             if(user.freeIndicesReserve.isEmpty()) return;
@@ -244,6 +247,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
     private void computersTurn(){
         List<Card> playableCards = computer.playableCards(pileCards.get(pileCards.size()-1));
         if (playableCards.size() > 0)  {
